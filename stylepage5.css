@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    background-color: black;
+    font: normal 15pt arial;
+    color: white;
+    justify-content: center;
+
+}
+
+div#content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+p#level {
+    font: normal 30pt arial;
+    letter-spacing: 5px;
+    margin-left: -50px;
+}
+
+a#btnpage5 {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    background-color: grey;
+    width: 270px;
+    height: 50px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+a#btngo {
+    color: black;
+    text-decoration: none;
+    background-color: greenyellow;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+img#imgbtngo {
+    margin-top: 30px;
+    margin-left: 8px;
+    align-items: center;
+    width: 25px;
+}
+
+a#btnback {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    background-color: rgba(128, 128, 128, 0.308);
+    width: 270px;
+    height: 50px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: medium;
+    letter-spacing: 0.5px;
+}
+
+
