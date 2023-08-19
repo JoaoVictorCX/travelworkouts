@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    background-color: black;
+    font: normal 15pt arial;
+    color: white;
+    justify-content: center;
+
+}
+
+div#content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+a#btngo {
+    color: black;
+    text-decoration: none;
+    background-color: greenyellow;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+img#imgbtngo {
+    margin-top: 30px;
+    margin-left: 8px;
+    align-items: center;
+    width: 25px;
+}
+
+img#logobxt {
+    margin-top: 30px;
+    width: 100px;
+    align-items: center;
+}
+
+img#logowt {
+    margin-top: 50px;
+    width: 240px;
+}
+
+p#tw{
+    margin-top: -20px;
+    text-align: center;
+    letter-spacing: 8px;
+}

@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    background-color: black;
+    font: normal 15pt arial;
+    color: white;
+    justify-content: center;
+
+}
+
+img#logowt {
+    width: 240px;
+}
+
+div#content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+a#btnpage2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    width: 200px;
+    border: 1px solid white;
+    height: 80px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: medium;
+}
+
+a#btnpage2:hover {
+    background-color: greenyellow;
+    color: black;
+    border: 1px solid greenyellow;
+}
+
+div#disclaimer {
+    color: grey;
+    margin-top: 80px;
+    display: flex;
+    width: 250px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    font-size: x-small;
+    padding: 10px;
+}
+
+img#imgdisc {
+    width: 60px;
+    opacity: 0.5;
+}
+
+
