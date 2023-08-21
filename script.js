@@ -19,7 +19,7 @@ let res = document.querySelector('div#res')
 
 function wodgen () {
     res.innerHTML = ''
-    res.innerHTML += '10 rounds for time of'
+    res.innerHTML += '<p><strong>10 rounds for time:<br>'
     randMovements = []
     
     //FUNÇÃO SORTEAR E INSERIR NUMEROS SORTEADOS
@@ -38,10 +38,10 @@ function wodgen () {
         var numMov = randMovements[i]
         if (i < 2){
             var movement = lower[numMov - 1]
-            res.innerHTML += `<p>${movement} x 10 reps`
+            res.innerHTML += `${movement} x 10 reps<br>`
         } else {
             var movement = cardio[numMov - 1]
-            res.innerHTML += `<p>${movement} x 10 reps`
+            res.innerHTML += `${movement} x 10 reps<br>`
         }
     }
 

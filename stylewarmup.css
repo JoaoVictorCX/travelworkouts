@@ -14,6 +14,7 @@ div#content {
 }
 
 div#res {
+    padding: 20px;
     background-color: white;
     color: black;
     width: 300px;
@@ -22,8 +23,13 @@ div#res {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+p#aviso {
+    font: italic 10pt arial;
     text-align: center;
 }
+
 
 
 img#logobxt {
