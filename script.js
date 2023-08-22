@@ -14,7 +14,6 @@ let cardio = [
 "Jumping Jack"
 ]
 
-
 let res = document.querySelector('div#res')
 
 function wodgen () {
@@ -36,6 +35,7 @@ function wodgen () {
     //FUNÇÃO IMPRIMIR MOVIMENTOS CORRESPONDENTES AO NUMERO SORTEADO
     for (let i = 0; i < (randMovements.length); i++){
         var numMov = randMovements[i]
+        
         if (i < 2){
             var movement = lower[numMov - 1]
             res.innerHTML += `${movement} x 10 reps<br>`

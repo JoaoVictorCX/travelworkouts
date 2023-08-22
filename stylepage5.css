@@ -18,7 +18,7 @@ p#level {
     letter-spacing: 5px;
 }
 
-a#btnpage5 {
+a.btnpage5 {
     margin-top: 10px;
     display: flex;
     align-items: center;
