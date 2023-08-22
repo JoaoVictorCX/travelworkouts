@@ -1,4 +1,4 @@
-let lower = [
+const lower = [
 "Squat",
 "Alt. Lunge",
 "Step-up",
@@ -6,7 +6,7 @@ let lower = [
 "Bird Dog"
 ]
 
-let cardio = [
+const cardio = [
 "Burpee",
 "Sprawls",
 "Double-under",
@@ -24,9 +24,8 @@ function wodgen () {
     //FUNÇÃO SORTEAR E INSERIR NUMEROS SORTEADOS
     while (randMovements.length < 3){
         var num = Math.floor(Math.random() * 5) + 1
-        if (randMovements.indexOf(num) === -1){
+        if (randMovements.indexOf(num) === -1)
             randMovements.push(num)
-        }
     }
     //FUNÇÃO VERIFICAR NIVEL ATIVIDADE (5/10/15 REPS)
 

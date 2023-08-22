@@ -19,7 +19,7 @@ p#level {
     margin-left: -80px;
 }
 
-a.btnpage3 {
+a.btnpage4 {
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -37,7 +37,7 @@ a.btnpage3 {
     cursor: pointer;
 }
 
-a.btnpage3:hover {
+a.btnpage4:hover {
     background-color: greenyellow;
     color: black;
     border: 1px solid greenyellow;
