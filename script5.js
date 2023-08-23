@@ -26,3 +26,9 @@ if (Object.hasOwn(niveis, level)){
     let res = document.getElementById('reslevel')
     res.innerHTML = niveis[level]
 }
+
+function setURL () {
+    let param2 = document.location.search
+    let btngo = document.getElementById('btngo')
+    btngo.href = "page6.html"+param2
+}
