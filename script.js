@@ -38,7 +38,7 @@ const cardiomovs = {
     },
     shuttlerun: {
         nome: "shuttle run",
-        qtde: 12
+        qtde: 16
     },
     singleunder: {
         nome: "single-unders",
@@ -50,7 +50,7 @@ const cardiomovs = {
     },
     run: {
         nome: "meters run",
-        qtde: 400
+        qtde: 800
     }
 }
 
@@ -63,7 +63,7 @@ let reps = 0
 const niveis = {
     beginner:0.25, 
     intermed:0.5, 
-    advanced:0.7, 
+    advanced:0.75, 
     athlet:1
 }
 
