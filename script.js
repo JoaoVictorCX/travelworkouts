@@ -73,10 +73,8 @@ if (Object.hasOwn(niveis, level)){
 
 function wodgen () {
     res.innerHTML = ''
-    res.innerHTML += '<p><strong>10 rounds for time:<br>'
+    res.innerHTML += '<strong>10 rounds for time:'
     randMovements = []
-
-
     
     while (randMovements.length < 3){
         var num = Math.floor(Math.random() * 5) + 1
@@ -98,7 +96,6 @@ function wodgen () {
             res.innerHTML += `${movimento.qtde*reps} ${movimento.nome}<br>`
         }
     }
-
 }
 
 function setURL () {

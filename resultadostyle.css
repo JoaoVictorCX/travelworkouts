@@ -23,7 +23,9 @@ div#res {
     align-items: center;
     text-align: center;
     padding-bottom: 40px;
+    padding-top: 30px;
 }
+
 
 
 img#logobxt {
@@ -32,15 +34,11 @@ img#logobxt {
     align-items: center;
 }
 
-img#logowt {
-
-    width: 50px;
-}
-
 p#tw{
     margin-top: 30px;
     text-align: center;
     letter-spacing: 8px;
+    line-height: 32px;
 }
 
 a#btnback {
