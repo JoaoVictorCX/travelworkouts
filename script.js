@@ -18,14 +18,10 @@ const lowermovs = {
         qtde: 20
     },
     downup: {
-        nome: "good mornings",
-        qtde: 10
+        nome: "jumping squats",
+        qtde: 20
     }
 }
-
-const upper = [
-
-]
 
 const abs = [
     "Sit-up",
@@ -42,7 +38,7 @@ const cardiomovs = {
     },
     shuttlerun: {
         nome: "shuttle run",
-        qtde: 10
+        qtde: 12
     },
     singleunder: {
         nome: "single-unders",
@@ -58,16 +54,6 @@ const cardiomovs = {
     }
 }
 
-const cardio = [
-"Burpee",
-"Sprawls",
-"Double-under",
-"Shuttlen run",
-"Jumping Jack",
-"Single-unders",
-"Double-unders"
-]
-
 let res = document.querySelector('div#res')
 let param = (new URL(document.location)).searchParams
 let type = param.get('type')
@@ -75,10 +61,10 @@ let level = param.get('level')
 let reps = 0
 
 const niveis = {
-    beginner:6, 
-    intermed:10, 
-    advanced:16, 
-    athlet:20
+    beginner:0.25, 
+    intermed:0.5, 
+    advanced:0.7, 
+    athlet:1
 }
 
 if (Object.hasOwn(niveis, level)){
@@ -90,8 +76,8 @@ function wodgen () {
     res.innerHTML += '<p><strong>10 rounds for time:<br>'
     randMovements = []
 
-    
 
+    
     while (randMovements.length < 3){
         var num = Math.floor(Math.random() * 5) + 1
         if (randMovements.indexOf(num) === -1)
@@ -104,12 +90,12 @@ function wodgen () {
             cardioKeys = Object.keys(cardiomovs)
             let movement = cardioKeys[numMov - 1]
             let movimento = cardiomovs[movement]
-            res.innerHTML += `${movimento.qtde} ${movimento.nome}<br>`
+            res.innerHTML += `${movimento.qtde*reps} ${movimento.nome}<br>`
         } else {
             lowerKeys = Object.keys(lowermovs)
             let movement = lowerKeys[numMov - 1]
             let movimento = lowermovs[movement]
-            res.innerHTML += `${movimento.qtde} ${movimento.nome}<br>`
+            res.innerHTML += `${movimento.qtde*reps} ${movimento.nome}<br>`
         }
     }
 
