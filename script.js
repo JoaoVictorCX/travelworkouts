@@ -1,9 +1,9 @@
 const lower = [
 "Squat",
-"Alt. Lunge",
+"Lunge",
 "Step-up",
 "Hip Extension",
-"Bird Dog"
+"Reserve Lunge"
 ]
 
 const cardio = [
@@ -11,7 +11,9 @@ const cardio = [
 "Sprawls",
 "Double-under",
 "Shuttlen run",
-"Jumping Jack"
+"Jumping Jack",
+"Single-unders",
+"Double-unders"
 ]
 
 let res = document.querySelector('div#res')
@@ -21,9 +23,9 @@ let level = param.get('level')
 let reps = 0
 
 const niveis = {
-    beginner:5, 
+    beginner:6, 
     intermed:10, 
-    advanced:15, 
+    advanced:16, 
     athlet:20
 }
 
