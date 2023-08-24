@@ -1,10 +1,27 @@
-const lower = [
-    "Squat",
-    "Lunge",
-    "Step-up",
-    "Hip Extension",
-    "Reserve Lunge"
-]
+
+
+const lowermovs = {
+    squat: {
+        nome: "air squats",
+        qtde: 20
+    },
+    lunge: {
+        nome: "lunges",
+        qtde: 20
+    },
+    step: {
+        nome: "step-ups",
+        qtde: 20
+    },
+    hipextension: {
+        nome: "hip entension",
+        qtde: 20
+    },
+    downup: {
+        nome: "good mornings",
+        qtde: 10
+    }
+}
 
 const upper = [
 
@@ -15,10 +32,31 @@ const abs = [
     "V-up alt",
     "V-up",
     "Plank",
-    "Mountain climbers",
-    
-
+    "Mountain climbers"
 ]
+
+const cardiomovs = {
+    burpee: {
+        nome: "burpees",
+        qtde: 20
+    },
+    shuttlerun: {
+        nome: "shuttle run",
+        qtde: 10
+    },
+    singleunder: {
+        nome: "single-unders",
+        qtde: 100
+    },
+    jumpingjack: {
+        nome: "jumping jacks",
+        qtde: 40
+    },
+    run: {
+        nome: "meters run",
+        qtde: 400
+    }
+}
 
 const cardio = [
 "Burpee",
@@ -52,6 +90,8 @@ function wodgen () {
     res.innerHTML += '<p><strong>10 rounds for time:<br>'
     randMovements = []
 
+    
+
     while (randMovements.length < 3){
         var num = Math.floor(Math.random() * 5) + 1
         if (randMovements.indexOf(num) === -1)
@@ -59,13 +99,17 @@ function wodgen () {
     }
 
     for (let i = 0; i < (randMovements.length); i++){
-        var numMov = randMovements[i]       
-        if (i < 2){
-            var movement = lower[numMov - 1]
-            res.innerHTML += `${movement} x ${reps} reps<br>`
+        var numMov = randMovements[i]
+        if (i < 1){
+            cardioKeys = Object.keys(cardiomovs)
+            let movement = cardioKeys[numMov - 1]
+            let movimento = cardiomovs[movement]
+            res.innerHTML += `${movimento.qtde} ${movimento.nome}<br>`
         } else {
-            var movement = cardio[numMov - 1]
-            res.innerHTML += `${movement} x ${reps} reps<br>`
+            lowerKeys = Object.keys(lowermovs)
+            let movement = lowerKeys[numMov - 1]
+            let movimento = lowermovs[movement]
+            res.innerHTML += `${movimento.qtde} ${movimento.nome}<br>`
         }
     }
 
