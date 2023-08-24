@@ -19,31 +19,8 @@ p#level {
     margin-left: -80px;
 }
 
-a.btnpage4 {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-    background-color: rgb(0, 0, 0);
-    width: 270px;
-    height: 50px;
-    border: 1px solid white;
-    border-radius: 30px;
-    text-align: center;
-    font-size: medium;
-    letter-spacing: 1px;
-    cursor: pointer;
-}
-
-a.btnpage4:hover {
-    background-color: greenyellow;
-    color: black;
-    border: 1px solid greenyellow;
-}
-
 a#btnback {
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,6 +33,38 @@ a#btnback {
     text-align: center;
     font-size: medium;
     letter-spacing: 0.5px;
-    margin-top: 90px;
 }
+
+img {
+    height: 190px;
+    padding: 26px;
+}
+
+div#disclaimer {
+    justify-content: center;
+    text-align: center;
+    margin-top: -10px;
+    color: rgba(255, 255, 255, 0.781);
+    display: flex;
+    width: 250px;
+    border: 1px solid rgba(255, 255, 255, 0.781);
+    border-radius: 20px;
+    font-size: 0.6em;
+}
+
+div#def {
+    margin-top: 15px;
+    display: flex;
+    font-size: small;
+    line-height: 53px;
+    color: rgba(255, 255, 255, 0.76);
+}
+
+p#nivel {
+    text-align: right;
+}
+
+
+
+
 

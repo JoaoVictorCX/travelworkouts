@@ -30,5 +30,5 @@ if (Object.hasOwn(niveis, level)){
 function setURL () {
     let param2 = document.location.search
     let btngo = document.getElementById('btngo')
-    btngo.href = "page6.html"+param2
+    btngo.href = "resultado.html"+param2
 }

@@ -1,9 +1,23 @@
 const lower = [
-"Squat",
-"Lunge",
-"Step-up",
-"Hip Extension",
-"Reserve Lunge"
+    "Squat",
+    "Lunge",
+    "Step-up",
+    "Hip Extension",
+    "Reserve Lunge"
+]
+
+const upper = [
+
+]
+
+const abs = [
+    "Sit-up",
+    "V-up alt",
+    "V-up",
+    "Plank",
+    "Mountain climbers",
+    
+
 ]
 
 const cardio = [
@@ -60,6 +74,6 @@ function wodgen () {
 function setURL () {
     let param2 = document.location.search
     let btnovo = document.getElementById('btnpage3')
-    btnpage3.href = "page6.html"+param2
+    btnpage3.href = "resultado.html"+param2
 }
 
