@@ -1,22 +1,27 @@
 const lower = {
     squat: {
         nome: "air squats",
+        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
         qtde: 40
     },
     lunge: {
         nome: "lunges",
+        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
         qtde: 40
     },
     step: {
         nome: "step-ups",
+        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
         qtde: 40
     },
     hipextension: {
         nome: "hip extension",
+        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
         qtde: 40
     },
     downup: {
         nome: "jumping squats",
+        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
         qtde: 40
     }
 }
@@ -148,6 +153,7 @@ function wodgen () {
                 let movement = lowerKeys[numMov - 1]
                 let movimento = lower[movement]
                 res.innerHTML += `${movimento.qtde*reps} ${movimento.nome}<br>`
+                
             } else if  (type == 'upper') {
                 upperKeys = Object.keys(upper)
                 let movement = upperKeys[numMov - 1]
@@ -160,19 +166,6 @@ function wodgen () {
                 res.innerHTML += `${movimento.qtde*reps} ${movimento.nome}<br>`
             }
         }
-
-        /*
-        if (i < 1){
-            cardioKeys = Object.keys(cardio)
-            let movement = cardioKeys[numMov - 1]
-            let movimento = cardio[movement]
-            res.innerHTML += `${movimento.qtde*reps} ${movimento.nome}<br>`
-        } else {
-            lowerKeys = Object.keys(lower)
-            let movement = lowerKeys[numMov - 1]
-            let movimento = lower[movement]
-            res.innerHTML += `${movimento.qtde*reps} ${movimento.nome}<br>`
-        } */
     }
 }
 
