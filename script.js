@@ -125,7 +125,6 @@ function wodgen () {
 
     for (let i = 0; i < (randMovements.length); i++){
         var numMov = randMovements[i]
-
         if (i < 1){
             cardioKeys = Object.keys(cardio)
             let movement = cardioKeys[numMov - 1]
@@ -133,7 +132,6 @@ function wodgen () {
             res.innerHTML += `${movimento.qtde*reps} ${movimento.nome}<br>`
         } else { 
             if (type == 'fullbody') {
-                i--
                 lowerKeys = Object.keys(lower)
                 let movement = lowerKeys[numMov - 1]
                 let movimento = lower[movement]
