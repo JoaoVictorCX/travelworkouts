@@ -22,7 +22,7 @@ div#res {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 p#tw{
@@ -68,4 +68,49 @@ a#btnaula:hover {
     background-color: greenyellow;
     color: black;
     border: 1px solid greenyellow;
+}
+
+a#btnpage3 {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    width: 270px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 30px;
+    text-align: center;
+    font-size: medium;
+    letter-spacing: 1px;
+}
+
+a#btnpage3:hover {
+    background-color: greenyellow;
+    color: black;
+    border: 1px solid greenyellow;
+}
+
+a#btnback {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.658);
+    width: 270px;
+    height: 50px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: medium;
+    letter-spacing: 0.5px;
+}
+
+img#logobxt {
+    margin-top: 30px;
+    width: 150px;
+    align-items: center;
 }
