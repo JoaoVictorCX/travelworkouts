@@ -1,106 +1,105 @@
-const lower = {
-    squat: {
-        nome: "air squats",
-        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
-        qtde: 40
-    },
-    lunge: {
-        nome: "lunges",
-        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
-        qtde: 40
-    },
-    step: {
-        nome: "step-ups",
-        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
-        qtde: 40
-    },
-    hipextension: {
-        nome: "hip extension",
-        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
-        qtde: 40
-    },
-    downup: {
-        nome: "jumping squats",
-        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
-        qtde: 40
-    }
-}
-
-const upper = {
-    pushup: {
-        nome: "push-ups",
-        qtde: 20
-    },
-    shouldertaps: {
-        nome: "shoulder taps",
-        qtde: 40
-    },
-    hspu: {
-        nome: "handstand push-ups",
-        qtde: 16
-    },
-    pullup: {
-        nome: "pull-ups",
-        qtde: 20
-    },
-    dips: {
-        nome: "static dips",
-        qtde: 20
-    }
-}
-
-const abs = {
-    situp: {
-        nome: "sit-ups",
-        qtde: 32
-    },
-    mountainclimber: {
-        nome: "mountain climbers",
-        qtde: 48
-    },
-    vupalt: {
-        nome: "alt. v-ups",
-        qtde: 24
-    },
-    sideplank: {
-        nome: "bicycle Crunch",
-        qtde: 32
-    },
-    plank: {
-        nome: "secs plank",
-        qtde: 60
-    }
-}
-
-const cardio = {
-    burpee: {
-        nome: "burpees",
-        qtde: 20
-    },
-    shuttlerun: {
-        nome: "shuttle run",
-        qtde: 16
-    },
-    singleunder: {
-        nome: "single-unders",
-        qtde: 100
-    },
-    jumpingjack: {
-        nome: "jumping jacks",
-        qtde: 40
-    },
-    run: {
-        nome: "meters run",
-        qtde: 400
-    }
-}
-
 let res = document.querySelector('div#res')
 let param = (new URL(document.location)).searchParams
 let type = param.get('type')
 let level = param.get('level')
 let reps = 0
 
+const lower = [
+    {
+        nome: "air squats",
+        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
+        qtde: 40
+    },
+    {
+        nome: "lunges",
+        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
+        qtde: 40
+    },
+    {
+        nome: "step-ups",
+        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
+        qtde: 40
+    },
+    {
+        nome: "hip extension",
+        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
+        qtde: 40
+    },
+    {
+        nome: "jumping squats",
+        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
+        qtde: 40
+    }
+]
+
+const upper = [
+    {
+        nome: "push-ups",
+        qtde: 20
+    },
+    {
+        nome: "shoulder taps",
+        qtde: 40
+    },
+    {
+        nome: "handstand push-ups",
+        qtde: 16
+    },
+    {
+        nome: "pull-ups",
+        qtde: 20
+    },
+    {
+        nome: "static dips",
+        qtde: 20
+    }
+]
+
+const abs = [
+    {
+        nome: "sit-ups",
+        qtde: 32
+    },
+    {
+        nome: "mountain climbers",
+        qtde: 48
+    },
+    {
+        nome: "alt. v-ups",
+        qtde: 24
+    },
+    {
+        nome: "bicycle Crunch",
+        qtde: 32
+    },
+    {
+        nome: "secs plank",
+        qtde: 60
+    }
+]
+
+const cardio = [
+    {
+        nome: "burpees",
+        qtde: 20
+    },
+    {
+        nome: "shuttle run",
+        qtde: 16
+    },
+    {
+        nome: "single-unders",
+        qtde: 100
+    },
+    {
+        nome: "jumping jacks",
+        qtde: 40
+    },
+    {
+        nome: "meters run",
+        qtde: 400
+    }
+]
 const niveis = {
     beginner:0.25, 
     intermed:0.5, 
@@ -112,59 +111,59 @@ if (Object.hasOwn(niveis, level)){
     reps = niveis[level]
 }
 
+const dicTipos = {
+    fullbody: function () {
+        const result = []
+        result.push(...get(1,cardio))
+        result.push(...get(1,lower))
+        result.push(...get(1,upper))
+        result.push(...get(1,abs))
+        return result
+    },
+    lower: function () {
+        const result = []
+        result.push(...get(1,cardio))
+        result.push(...get(2,lower))
+        return result
+    },
+    upper: function () {
+        const result = []
+        result.push(...get(1,cardio))
+        result.push(...get(2,upper))
+        return result
+    },
+    abs: function () {
+        const result = []
+        result.push(...get(1,cardio))
+        result.push(...get(2,abs))
+        return result
+    }
+}
+
+function get (qtde, typeList){
+    const arrayIndex = []
+    const result = []
+    while (arrayIndex.length < qtde){
+        const num = Math.floor(Math.random() * typeList.length)
+        if (arrayIndex.indexOf(num) === -1){
+            arrayIndex.push(num)
+            result.push(`${typeList[num].qtde*reps} ${typeList[num].nome}<br>`)
+        }
+    }
+    return result
+}
+
 function wodgen () {
     res.innerHTML = ''
     res.innerHTML += '<strong>5 rounds for time:'
     randMovements = []
-    
-    while (randMovements.length < 3){
-        var num = Math.floor(Math.random() * 5) + 1
-        if (randMovements.indexOf(num) === -1)
-            randMovements.push(num)
+
+    if (Object.hasOwn(dicTipos, type)){
+        const movements = dicTipos[type]()
+        for (const mov of movements)
+            res.innerHTML += mov
     }
 
-    for (let i = 0; i < (randMovements.length); i++){
-        var numMov = randMovements[i]
-        if (i < 1){
-            cardioKeys = Object.keys(cardio)
-            let movement = cardioKeys[numMov - 1]
-            let movimento = cardio[movement]
-            res.innerHTML += `${movimento.qtde*reps} ${movimento.nome}<br>`
-        } else { 
-            if (type == 'fullbody') {
-                lowerKeys = Object.keys(lower)
-                let movement = lowerKeys[numMov - 1]
-                let movimento = lower[movement]
-                res.innerHTML += `${movimento.qtde*reps} ${movimento.nome}<br>`
-                i++
-                upperKeys = Object.keys(upper)
-                let movement2 = upperKeys[numMov - 1]
-                let movimento2 = upper[movement2]
-                res.innerHTML += `${movimento2.qtde*reps} ${movimento2.nome}<br>`
-                i++
-                absKeys = Object.keys(abs)
-                let movement3 = absKeys[numMov - 1]
-                let movimento3 = abs[movement3]
-                res.innerHTML += `${movimento3.qtde*reps} ${movimento3.nome}<br>`
-            } else if (type == 'lower') {
-                lowerKeys = Object.keys(lower)
-                let movement = lowerKeys[numMov - 1]
-                let movimento = lower[movement]
-                res.innerHTML += `${movimento.qtde*reps} ${movimento.nome}<br>`
-                
-            } else if  (type == 'upper') {
-                upperKeys = Object.keys(upper)
-                let movement = upperKeys[numMov - 1]
-                let movimento = upper[movement]
-                res.innerHTML += `${movimento.qtde*reps} ${movimento.nome}<br>`
-            } else if (type == 'abs') {
-                absKeys = Object.keys(abs)
-                let movement = absKeys[numMov - 1]
-                let movimento = abs[movement]
-                res.innerHTML += `${movimento.qtde*reps} ${movimento.nome}<br>`
-            }
-        }
-    }
 }
 
 function setURL () {
