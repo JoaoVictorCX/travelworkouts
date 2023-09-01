@@ -100,6 +100,7 @@ const cardio = [
         qtde: 400
     }
 ]
+
 const niveis = {
     beginner:0.25, 
     intermed:0.5, 
@@ -171,4 +172,26 @@ function setURL () {
     let btnovo = document.getElementById('btnpage3')
     btnpage3.href = "resultado.html"+param2
 }
+
+async function getWod (){
+    let choice = level
+    const response = await fetch("./workouts.json")
+    const wod = await response.json()
+    let res = document.querySelector('div#res')
+    const x = Math.floor(Math.random() * wod.length)
+         if (wod[x].nivel == choice) {
+            res.innerHTML = `<strong>"${wod[x].name}"</strong><br>`
+            res.innerHTML += `${wod[x].type}<br>`
+            wod[x].description.forEach(mov => {res.innerHTML += `${mov}<br>`})
+            res.innerHTML += `<br>Nível:<br> <strong>${wod[x].nivel}</strong>`
+         } else {
+            getWod()
+         }
+    }
+
+    
+
+
+
+
 

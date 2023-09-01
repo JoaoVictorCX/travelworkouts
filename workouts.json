@@ -1,17 +1,126 @@
 [
     {
-        "nome": "BURPEE CHALLENGE",
-        "tipo": "Complete for time",
-        "movimentos": [
-            "100 burpees"
-        ]
+        "name": "BURPEE CHALLENGE",
+        "type": "Complete for time",
+        "description": [
+            "50 burpees"
+        ],
+        "nivel": "Iniciante"
     },
     {
-        "nome": "FIRE LEGS",
-        "tipo": "Complete for time",
-        "movimentos": [
+        "name": "MINI-MURPH",
+        "type": "Complete for time",
+        "description": [
+            "400m run",
+            "40 shoulder taps",
+            "60 push-ups",
+            "100 air squats",
+            "400m run"
+        ],
+        "nivel": "Iniciante"
+    },
+    {
+        "name": "HI JACK!",
+        "type": "4 rounds for time",
+        "description": [
+            "15 jumping jacks",
+            "10 air squats",
+            "15 jumping jacks",
+            "10 push-ups",
+            "15 jumping jacks",
+            "10 sit-ups"
+
+        ],
+        "nivel": "Iniciante"
+    },
+    {
+        "name": "BURPEE CHALLENGE",
+        "type": "Complete for time",
+        "description": [
             "100 burpees"
-        ]
+        ],
+        "nivel": "Avançado"
+    },
+    {
+        "name": "BURPEE CHALLENGE",
+        "type": "Complete for time",
+        "description": [
+            "200 burpees"
+        ],
+        "nivel": "Atleta"
+    },
+    {
+        "name": "BODYWEIGHT FRAN",
+        "type": "Complete for time",
+        "description": [
+            "21 - 15 - 9",
+            "Burpees",
+            "Pull-ups"
+        ],
+        "nivel": "Intermediário"
+    },
+    {
+        "name": "FIRE ARMS",
+        "type": "Complete for time",
+        "description": [
+            "100 burpees",
+            "Every minute: 10 push-ups"
+        ],
+        "nivel": "Intermediário"
+    },
+    {
+        "name": "300",
+        "type": "Complete for time",
+        "description": [
+            "300 air squats"
+        ],
+        "nivel": "Intermediário"
+    },
+    {
+        "name": "Run & Squats",
+        "type": "3 rounds for time:",
+        "description": [
+            "800m run",
+            "50 air squats"
+        ],
+        "nivel": "Intermediário"
+    },
+    {
+        "name": "Annie",
+        "type": "Complete for time:",
+        "description": [
+            "50-40-30-20-10",
+            "Double-under",
+            "Sit-up"
+        ],
+        "nivel": "Intermediário"
+    },
+    {
+        "name": "Annie",
+        "type": "Complete for time:",
+        "description": [
+            "50-40-30-20-10",
+            "Double-under",
+            "Sit-up"
+        ],
+        "nivel": "Intermediário"
+    },
+    {
+        "name": "FIRE LEGS",
+        "type": "Complete for time",
+        "description": [
+            "100 burpees"
+        ],
+        "nivel": "Intermediário"
+    },
+    {
+        "name": "GOOD MORNING",
+        "type": "10 rounds for time",
+        "description": [
+            "10 sit-ups",
+            "10 burpees"
+        ],
+        "nivel": "Avançado"
     }
 
 ]
