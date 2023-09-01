@@ -71,5 +71,9 @@ a#btnback {
     margin-top: 20px;
 }
 
+p#choice {
+    font: normal 30pt arial;
+    letter-spacing: 5px;
 
+}
 

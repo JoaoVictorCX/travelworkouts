@@ -1,25 +1,5 @@
 [
     {
-        "name": "BURPEE CHALLENGE",
-        "type": "Complete for time",
-        "description": [
-            "50 burpees"
-        ],
-        "nivel": "Iniciante"
-    },
-    {
-        "name": "MINI-MURPH",
-        "type": "Complete for time",
-        "description": [
-            "400m run",
-            "40 shoulder taps",
-            "60 push-ups",
-            "100 air squats",
-            "400m run"
-        ],
-        "nivel": "Iniciante"
-    },
-    {
         "name": "HI JACK!",
         "type": "4 rounds for time",
         "description": [
@@ -30,97 +10,114 @@
             "15 jumping jacks",
             "10 sit-ups"
 
-        ],
-        "nivel": "Iniciante"
+        ]
     },
     {
-        "name": "BURPEE CHALLENGE",
-        "type": "Complete for time",
+        "name": "MARY",
+        "type": "20 minutes for max rounds:",
         "description": [
-            "100 burpees"
-        ],
-        "nivel": "Avançado"
+            "5 handstand push-ups",
+            "10 pistols squats",
+            "15 pull-ups"
+        ]
     },
     {
-        "name": "BURPEE CHALLENGE",
-        "type": "Complete for time",
+        "name": "THE 500",
+        "type": "Complete for time:",
         "description": [
-            "200 burpees"
-        ],
-        "nivel": "Atleta"
+            "500 double-unders",
+            "Every minute, 3 air squats"
+        ]
     },
     {
-        "name": "BODYWEIGHT FRAN",
-        "type": "Complete for time",
+        "name": "THE HOTEL ROOM WOD",
+        "type": "20 rounds for time:",
         "description": [
-            "21 - 15 - 9",
-            "Burpees",
-            "Pull-ups"
-        ],
-        "nivel": "Intermediário"
+            "5 push-ups",
+            "5 air squats",
+            "5 sit-ups"
+        ]
     },
     {
-        "name": "FIRE ARMS",
-        "type": "Complete for time",
+        "name": "200 SQUATS",
+        "type": "Complete for time:",
         "description": [
-            "100 burpees",
-            "Every minute: 10 push-ups"
-        ],
-        "nivel": "Intermediário"
+            "200 air squats"
+        ]
     },
     {
-        "name": "300",
-        "type": "Complete for time",
-        "description": [
-            "300 air squats"
-        ],
-        "nivel": "Intermediário"
-    },
-    {
-        "name": "Run & Squats",
+        "name": "GYMNASTIC CONDITIONING",
         "type": "3 rounds for time:",
         "description": [
-            "800m run",
-            "50 air squats"
-        ],
-        "nivel": "Intermediário"
+            "10 handstand push-ups",
+            "200m run"
+        ]
     },
     {
-        "name": "Annie",
+        "name": "COUNTDOWN BY BURPEES",
+        "type": "Complete for time:",
+        "description": [
+            "10-9-8-7-6-5-4-3-2-1",
+            "Burpees",
+            "Sit-ups"
+        ]
+    },
+    {
+        "name": "ANNIE",
         "type": "Complete for time:",
         "description": [
             "50-40-30-20-10",
-            "Double-under",
-            "Sit-up"
-        ],
-        "nivel": "Intermediário"
+            "Double-unders",
+            "Sit-ups"
+        ]
     },
     {
-        "name": "Annie",
-        "type": "Complete for time:",
+        "name": "CINDY",
+        "type": "20 minutes for max rounds:",
         "description": [
-            "50-40-30-20-10",
-            "Double-under",
-            "Sit-up"
-        ],
-        "nivel": "Intermediário"
+            "5 pull-ups",
+            "10 push-ups",
+            "15 air squats"
+        ]
     },
     {
-        "name": "FIRE LEGS",
-        "type": "Complete for time",
+        "name": "EMOM20",
+        "type": "Emom 20 minutes",
         "description": [
-            "100 burpees"
-        ],
-        "nivel": "Intermediário"
+            "Minute 1 - 15 push-ups",
+            "Minute 2 - 20 air squats",
+            "Minute 3 - 15 sit-ups",
+            "Minute 4 - 20 lunges",
+            "and repeat..."
+        ]
     },
     {
-        "name": "GOOD MORNING",
-        "type": "10 rounds for time",
+        "name": "FIRE RUN",
+        "type": "8 rounds for time:",
         "description": [
-            "10 sit-ups",
-            "10 burpees"
-        ],
-        "nivel": "Avançado"
+            "400m run",
+            "Rest 90 seconds"
+        ]
+    },
+    {
+        "name": "LEGS BURN-OUT",
+        "type": "3 rounds for time:",
+        "description": [
+            "50 lunges",
+            "50 air squats",
+            "50 hip extensions"
+    },
+    {
+        "name": "LEGS BURN-OUT",
+        "type": "3 rounds for time:",
+        "description": [
+            "50 lunges",
+            "50 air squats",
+            "50 hip extensions"
     }
+    
+    
+    
+
 
 ]

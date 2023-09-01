@@ -174,19 +174,16 @@ function setURL () {
 }
 
 async function getWod (){
-    let choice = level
+
     const response = await fetch("./workouts.json")
     const wod = await response.json()
     let res = document.querySelector('div#res')
     const x = Math.floor(Math.random() * wod.length)
-         if (wod[x].nivel == choice) {
-            res.innerHTML = `<strong>"${wod[x].name}"</strong><br>`
-            res.innerHTML += `${wod[x].type}<br>`
-            wod[x].description.forEach(mov => {res.innerHTML += `${mov}<br>`})
-            res.innerHTML += `<br>Nível:<br> <strong>${wod[x].nivel}</strong>`
-         } else {
-            getWod()
-         }
+    res.innerHTML = `<strong>"${wod[x].name}"</strong><br>`
+    res.innerHTML += `${wod[x].type}<br>`
+    wod[x].description.forEach(mov => {res.innerHTML += `${mov}<br>`})
+    res.innerHTML += `<br>`
+    //res.innerHTML += `<small><br>Nível de dificuldade: <strong>${wod[x].nivel}</strong></small>`
     }
 
     
