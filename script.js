@@ -7,34 +7,50 @@ let reps = 0
 const lower = [
     {
         nome: "air squats",
-        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
-        qtde: 40
+        qtde: 44
     },
     {
         nome: "lunges",
-        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
         qtde: 40
     },
     {
         nome: "step-ups",
-        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
         qtde: 40
     },
     {
-        nome: "hip extension",
-        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
+        nome: "hip brigde",
         qtde: 40
     },
     {
         nome: "jumping squats",
-        link: "https://www.youtube.com/watch?v=rMvwVtlqjTE",
         qtde: 40
+    },
+    {
+        nome: "alt. cossack squats",
+        qtde: 32
+    },
+    {
+        nome: "sumo squats",
+        qtde: 32
+    },
+    {
+        nome: "narrow stance squats",
+        qtde: 32
+    },
+    {
+        nome: "pistols squats",
+        qtde: 20
     }
+
 ]
 
 const upper = [
     {
         nome: "push-ups",
+        qtde: 32
+    },
+    {
+        nome: "narrow push-ups",
         qtde: 20
     },
     {
@@ -50,9 +66,14 @@ const upper = [
         qtde: 20
     },
     {
-        nome: "static dips",
+        nome: "chair dips",
         qtde: 20
+    },
+    {
+        nome: "pike push-ups",
+        qtde: 24
     }
+    
 ]
 
 const abs = [
@@ -69,13 +90,31 @@ const abs = [
         qtde: 24
     },
     {
-        nome: "bicycle Crunch",
+        nome: "v-ups",
+        qtde: 24
+    },
+    {
+        nome: "bicycle crunch",
         qtde: 32
     },
     {
         nome: "secs plank",
         qtde: 60
+    },
+    {
+        nome: "secs of side plank<br>(left/right)",
+        qtde: 40
+    },
+    {
+        nome: "toes touches",
+        qtde: 28
     }
+    ,
+    {
+        nome: "secs of russian twist",
+        qtde: 36
+    }
+    
 ]
 
 const cardio = [
@@ -84,8 +123,24 @@ const cardio = [
         qtde: 20
     },
     {
+        nome: "sprawls",
+        qtde: 28
+    },
+    {
+        nome: "burpee broad jumps",
+        qtde: 16
+    },
+    {
+        nome: "broad jumps",
+        qtde: 16
+    },
+    {
         nome: "shuttle run",
         qtde: 16
+    },
+    {
+        nome: "secs of static run",
+        qtde: 60
     },
     {
         nome: "single-unders",
@@ -108,6 +163,21 @@ const niveis = {
     athlet:1
 }
 
+const dicTypeWod = [
+   {
+        nome: "rounds for time",
+        qtde: 5
+   },
+   {
+        nome: "minutes for max rounds",
+        qtde: 28*niveis[level]
+    },
+    {
+        nome: "rounds for time",
+        qtde: 3
+   },
+]
+
 if (Object.hasOwn(niveis, level)){
     reps = niveis[level]
 }
@@ -115,6 +185,7 @@ if (Object.hasOwn(niveis, level)){
 const dicTipos = {
     fullbody: function () {
         const result = []
+        result.push(...getTypeWod(dicTypeWod))
         result.push(...get(1,cardio))
         result.push(...get(1,lower))
         result.push(...get(1,upper))
@@ -123,22 +194,34 @@ const dicTipos = {
     },
     lower: function () {
         const result = []
+        result.push(...getTypeWod(dicTypeWod))
         result.push(...get(1,cardio))
         result.push(...get(2,lower))
         return result
     },
     upper: function () {
         const result = []
+        result.push(...getTypeWod(dicTypeWod))
         result.push(...get(1,cardio))
         result.push(...get(2,upper))
         return result
     },
     abs: function () {
         const result = []
+        result.push(...getTypeWod(dicTypeWod))
         result.push(...get(1,cardio))
         result.push(...get(2,abs))
         return result
     }
+}
+
+function getTypeWod (typeList){
+        const result = []
+        const num = Math.floor(Math.random() * typeList.length)
+        if (typeList[num].qtde < 4)
+            reps = niveis[level]*2
+        result.push(`${typeList[num].qtde} ${typeList[num].nome}<br>`)
+        return result
 }
 
 function get (qtde, typeList){
@@ -156,7 +239,7 @@ function get (qtde, typeList){
 
 function wodgen () {
     res.innerHTML = ''
-    res.innerHTML += '<strong>5 rounds for time:'
+    //res.innerHTML += '<strong>5 rounds for time:'
     randMovements = []
 
     if (Object.hasOwn(dicTipos, type)){
@@ -184,7 +267,7 @@ async function getWod (){
     wod[x].description.forEach(mov => {res.innerHTML += `${mov}<br>`})
     res.innerHTML += `<br>`
     //res.innerHTML += `<small><br>Nível de dificuldade: <strong>${wod[x].nivel}</strong></small>`
-    }
+}
 
     
 
